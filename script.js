@@ -2,6 +2,10 @@ let humanScore = 0;
 let computerScore = 0;
 const choices = ["rock", "paper", "scissors"];
 
+const playButton = document.getElementById("startGame");
+playButton.addEventListener("click", startGame);
+document.addEventListener("DOMContentLoaded", () => {});
+
 function game() {
   for (let i = 0; i < 5; i++) {
     const humanChoice = getHumanChoice();
@@ -10,6 +14,10 @@ function game() {
     console.log("---------");
   }
   console.log(`Final score - Human: ${humanScore}, Computer: ${computerScore}`);
+}
+
+function startGame() {
+  game();
 }
 
 function getComputerChoice() {
@@ -43,5 +51,3 @@ function playRound(humanSelection, computerSelection) {
     computerScore++;
   }
 }
-
-game();
