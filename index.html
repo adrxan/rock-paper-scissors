@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
@@ -11,7 +11,7 @@
 
 <body>
     <h1 class="title">
-        Rock! Paper! Scissors!
+        Rock, Paper, Scissors...
     </h1>
 
     <div class="container">
@@ -19,16 +19,16 @@
             <div class="userInfo">
                 <p class="user">Computer</p>
                 <div class="scoreBox">
-                    <p class="userScore">0</p>
+                    <p class="score" id="computerScore">0</p>
                 </div>
             </div>
             <p id="comTurnEmote" class="turn">🤜</p>
         </div>
         <div id="playerBox" class="turnBox">
             <div class="userInfo">
-                <p class="user">You</p>
+                <p class="user">Player</p>
                 <div class="scoreBox">
-                    <p class="userScore">0</p>
+                    <p class="score" id="humanScore">0</p>
                 </div>
             </div>
             <p id="playerTurnEmote" class="turn">🤛</p>
@@ -36,10 +36,12 @@
     </div>
     <div class="choiceContainer">
         <p class="message">...Go!</p>
-        <div class="buttons">
-            <button id="btnRock" class="btnChoice">Rock</button>
-            <button id="btnPaper" class="btnChoice">Paper</button>
-            <button id="btnScissors" class="btnChoice">Scissors</button>
+        <div id="buttons">
+            <div id="choiceButtons">
+                <button id="rock" class="btnChoice">Rock</button>
+                <button id="paper" class="btnChoice">Paper</button>
+                <button id="scissors" class="btnChoice">Scissors</button>
+            </div>
         </div>
     </div>
 </body>
